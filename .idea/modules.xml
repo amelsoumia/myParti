@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/org.roehampton.sd3.myparti.iml" filepath="$PROJECT_DIR$/org.roehampton.sd3.myparti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myParti.iml" filepath="$PROJECT_DIR$/myParti.iml" />
     </modules>
   </component>
 </project>
