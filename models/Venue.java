@@ -94,7 +94,7 @@ public abstract class Venue implements Pricing {
 
         StringBuilder output = new StringBuilder();
 
-        output.append("\nCatering Options:\n\n");
+        output.append("Catering Options:\n\n");
 
         for (Catering c : cateringOptions) {
 
@@ -102,8 +102,8 @@ public abstract class Venue implements Pricing {
                     .append("\n")
                     .append(c.description)
                     .append("\nPrice: £")
-                    .append(String.format("%.2f", c.facPrice))
-                    .append(" per guest.\n\n");
+                    .append(c.facPrice)
+                    .append("\n\n");
         }
 
         return output.toString();
@@ -114,7 +114,7 @@ public abstract class Venue implements Pricing {
 
         StringBuilder output = new StringBuilder();
 
-        output.append("\nDecoration Options:\n\n");
+        output.append("Decoration Options:\n\n");
 
         for (Decoration d : decorations) {
 
@@ -122,8 +122,8 @@ public abstract class Venue implements Pricing {
                     .append("\n")
                     .append(d.description)
                     .append("\nPrice: £")
-                    .append(String.format("%.2f", d.facPrice))
-                    .append(".\n\n");
+                    .append(d.facPrice)
+                    .append("\n\n");
         }
 
         return output.toString();

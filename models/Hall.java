@@ -23,13 +23,12 @@ public class Hall extends Venue {
     @Override
     public String displayVenue() {
 
-        return "\n"
-                + venueName
+        return venueName
                 + " Hall\n\n"
                 + description
                 + "\nLocated in " + location + "."
                 + "\nThe maximum capacity is " + capacity
-                + " people, priced at £" + String.format("%.2f", calculateCost()) + " per hour.\n";
+                + " people, priced at £" + calculateCost() + " per hour.\n\n";
     }
 
 }

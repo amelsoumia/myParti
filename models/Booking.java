@@ -66,13 +66,13 @@ public class Booking implements IdGenerator, OverallPricing {
 
     public String displayBooking() {
 
-        return "\nThank you for your booking " + user.getName() + "."
+        return "Thank you for your booking " + user.getName() + "."
                 + "\nORDER DETAILS\n"
                 + "Booking ID: " + bookingID
-                + " | Venue: " + venue.getVenueName()
+                + " | Venue: " + venue.venueName
                 + " for a(n) " + eventType
                 + " | Facilities: " + food.facName + " catering & "
                 + decor.facName + " decorations\n"
-                + "The total price of this booking is £" + String.format("%.2f", overallCost()) + "\n";
+                + "The total price of this booking is £" + overallCost();
     }
 }
