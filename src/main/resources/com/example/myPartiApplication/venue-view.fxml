@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myPartiApplication.MyPartiVenueController">
+
+    <!--Layer 1  -->
+    <VBox alignment="TOP_CENTER" prefHeight="611.0" prefWidth="470.0" spacing="20.0" style="-fx-background-color: #f2ecee;">
+
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+
+        <!-- Holds heading and menu button -->
+        <HBox prefHeight="100.0" prefWidth="200.0">
+
+            <VBox prefHeight="90.0" prefWidth="45.0">
+
+                <!-- Menu button -->
+                <Button fx:id="menuBtn1" mnemonicParsing="false" onAction="#openMenu" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="≡" wrapText="true">
+
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+
+                    <cursor>
+                       <Cursor fx:constant="HAND" />
+                    </cursor>
+
+                </Button>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS" prefHeight="60.0" prefWidth="33.0" />
+
+            <VBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="413.0">
+
+                 <!-- Main Heading -->
+                 <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="331.0" text="myParti Home">
+
+                    <font>
+                       <Font name="Bell MT" size="50.0" />
+                    </font>
+
+                 </Label>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS" prefHeight="60.0" prefWidth="87.0" />
+
+         </HBox>
+
+        <!-- Holds the page's sections-->
+        <SplitPane dividerPositions="0.4664586583463338" prefHeight="500.0" prefWidth="200.0" style="-fx-box-border: transparent; -fx-background-color: transparent;">
+
+            <!-- Holds the left 'venue list' section  -->
+            <VBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="153.0" spacing="10.0">
+
+                <!-- Section Heading -->
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Our Venues">
+                    <font>
+                        <Font name="Bell MT Italic" size="30.0" />
+                    </font>
+                </Label>
+
+                <!-- List of venues -->
+                <ListView fx:id="venueList" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-size: 15px; -fx-font-family: Arial; -fx-opacity: 0.9;">
+
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+
+                </ListView>
+
+            </VBox>
+
+            <!-- Holds the right 'venue description' section -->
+            <VBox alignment="TOP_CENTER" prefHeight="189.0" prefWidth="349.0" spacing="10.0">
+
+                <!-- Label that will be populated with venue information -->
+                <Label fx:id="venueDetails" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" text="Venue details" textAlignment="LEFT" wrapText="true" VBox.vgrow="ALWAYS">
+
+                    <font>
+                       <Font name="Arial" size="20.0" />
+                    </font>
+
+                </Label>
+
+                <!-- 'Select' button -->
+                <Button fx:id="selectVenueBtn" alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSelectVenueBtn" style="-fx-background-color: WHITE; -fx-padding: 7 12 7 12; -fx-border-color: BLACK; -fx-border-radius: 6; -fx-background-radius: 6;" text="Select">
+
+                    <font>
+                       <Font name="Arial" size="15.0" />
+                    </font>
+
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+
+                </Button>
+
+            </VBox>
+
+        </SplitPane>
+
+    </VBox>
+
+    <!-- Layer 2 -->
+    <VBox fx:id="menuBarLayer" StackPane.alignment="TOP_LEFT" managed="false" maxHeight="200.0" maxWidth="120.0" visible="false">
+
+        <!-- Holds the menu bar -->
+        <Pane maxWidth="150.0" maxHeight="100.0"  style="-fx-background-color: white; -fx-background-radius: 5;" translateX="15.0" translateY="20.0">
+
+            <Button fx:id="menuBtn2" mnemonicParsing="false" onAction="#closeMenu" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="≡" wrapText="true">
+
+                <font>
+                    <Font size="25.0" />
+                </font>
+
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+
+            </Button>
+
+            <Button fx:id="myBookingsBtn" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleMyBookingsBtn" prefHeight="23.0" prefWidth="100" style="-fx-background-color: transparent;" text="My Bookings">
+
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+
+                <font>
+                    <Font name="Arial" size="12.0" />
+                </font>
+
+            </Button>
+
+        </Pane>
+
+    </VBox>
+
+</StackPane>

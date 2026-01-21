@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="1061.0" prefWidth="527.0" fitToWidth="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myPartiApplication.MyPartiBookingController">
+
+    <VBox alignment="TOP_CENTER" prefHeight="1137.0" prefWidth="524.0" spacing="20.0" style="-fx-background-color: #f2ecee;">
+
+        <!-- Holds the heading and home button -->
+        <HBox alignment="BASELINE_CENTER" prefHeight="53.0" prefWidth="430.0">
+
+            <!-- Holds the home button -->
+            <VBox prefHeight="67.0" prefWidth="153.0">
+
+                <!-- Home button, returns user to home page -->
+                <Button fx:id="homeBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickHomeBtn" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: transparent;" text="⬅🏠">
+
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+
+                </Button>
+
+                <Region prefHeight="9.0" prefWidth="65.0" />
+
+            </VBox>
+
+            <Region prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+
+            <!-- Holds the heading -->
+            <VBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="399.0">
+
+                <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="294.0" text="Booking Page" wrapText="true">
+
+                    <font>
+                        <Font name="Bell MT" size="50.0" />
+                    </font>
+
+                </Label>
+
+            </VBox>
+
+            <Region prefHeight="32.0" prefWidth="141.0" HBox.hgrow="ALWAYS" />
+
+        </HBox>
+
+        <Separator prefWidth="200.0" />
+
+        <!-- Displays the selected venues name -->
+        <Label fx:id="venueName" text="Venue Name">
+            <font>
+                <Font name="Bell MT Italic" size="30.0" />
+            </font>
+
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+
+        </Label>
+
+
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="121.0" text="1. Select a duration">
+
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+
+        </Label>
+
+        <ComboBox fx:id="durationsCombo" prefWidth="150.0" promptText="🕑" />
+
+
+        <Label alignment="CENTER" contentDisplay="CENTER" text="2. Select event type">
+
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+
+        </Label>
+
+        <ComboBox fx:id="eventTypesCombo" prefWidth="150.0" promptText="★" />
+
+
+        <Label text="3. Customise your event">
+
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+
+        </Label>
+
+        <!-- Holds catering and decoration selection sections -->
+        <HBox alignment="CENTER" prefHeight="170.0" prefWidth="484.0">
+
+            <!-- Catering selection section -->
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="403.0">
+
+                <ComboBox fx:id="cateringOptionsCombo" prefWidth="150.0" promptText="Catering" style="-fx-font-family: Arial;" />
+
+                <Label fx:id="cateringInfo" text="Catering info">
+
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+
+                </Label>
+
+            </VBox>
+
+            <!-- Decoration selection section -->
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="385.0">
+
+                <ComboBox fx:id="decorOptions" prefWidth="150.0" promptText="Decorations" style="-fx-font-family: Arial;" />
+
+                <Label fx:id="decorInfo" text="Decor info">
+
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+
+                </Label>
+
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+
+            </VBox>
+
+        </HBox>
+
+
+        <Label text="4. Enter guest count">
+
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+
+        </Label>
+
+        <TextField fx:id="guestCountInput" alignment="CENTER" maxWidth="100.0" prefHeight="25.0" prefWidth="100.0" promptText="Guest Count" />
+
+
+        <Label text="5. Enter your details">
+
+            <VBox.margin>
+                <Insets top="15.0" />
+            </VBox.margin>
+
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+
+        </Label>
+
+            <TextField fx:id="firstNameInput" maxWidth="300.0" promptText="First Name" />
+            <TextField fx:id="lastNameInput" maxWidth="300.0" promptText="Last Name" />
+            <TextField fx:id="emailInput" maxWidth="300.0" promptText="Email" />
+            <TextField fx:id="phoneNumberInput" maxWidth="300.0" promptText="Phone Number" />
+
+            <Button fx:id="bookBtn" mnemonicParsing="false" onAction="#handleBookBtn" style="-fx-background-color: WHITE; -fx-padding: 7 12 7 12; -fx-border-color: BLACK; -fx-border-radius: 6; -fx-background-radius: 6;" text="Book">
+
+                <font>
+                    <Font name="Arial" size="15.0" />
+                </font>
+
+                <VBox.margin>
+                  <Insets top="40.0" />
+                </VBox.margin>
+
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+
+            </Button>
+
+            <Label fx:id="errorLabel" textFill="red" />
+
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+
+    </VBox>
+
+</ScrollPane>
