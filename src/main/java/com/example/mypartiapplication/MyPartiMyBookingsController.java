@@ -1,6 +1,6 @@
-package com.example.myPartiApplication;
+package com.example.mypartiapplication;
 
-import org.roehampton.myPartiDomain.*;
+import org.roehampton.mypartidomain.*;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

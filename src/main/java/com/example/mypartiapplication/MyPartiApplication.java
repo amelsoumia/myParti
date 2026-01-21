@@ -1,4 +1,4 @@
-package com.example.myPartiApplication;
+package com.example.mypartiapplication;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

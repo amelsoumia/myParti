@@ -1,4 +1,4 @@
-package org.roehampton.myPartiDomain;
+package org.roehampton.mypartidomain;
 
 import java.util.ArrayList;
 import java.util.List;

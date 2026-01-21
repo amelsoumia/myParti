@@ -1,14 +1,14 @@
-package org.roehampton.myPartiDomain;
+package org.roehampton.mypartidomain;
 
-import static org.roehampton.myPartiDomain.Booking.getDuration;
+import static org.roehampton.mypartidomain.Booking.*;
 
 import java.util.List;
 
 
-public class Castle extends Venue {
+public class Hall extends Venue {
 
     // Constructor
-    public Castle(String venueName, String description, String location, int capacity, List<String> cateringNames, List<String> cateringDescr, List<Double> cateringPrices, List<String> decorNames, List<String> decorDescr, List<Double> decorPrices) {
+    public Hall(String venueName, String description, String location, int capacity, List<String> cateringNames, List<String> cateringDescr, List<Double> cateringPrices, List<String> decorNames, List<String> decorDescr, List<Double> decorPrices) {
 
         super(venueName, description, location, capacity, cateringNames, cateringDescr, cateringPrices, decorNames, decorDescr, decorPrices);
     }
@@ -18,7 +18,7 @@ public class Castle extends Venue {
     @Override
     public double calculateCost() {
 
-        return basePrice*2*getDuration(); // Adds a multiplier to the price
+        return basePrice*getDuration(); // No multiplier
     }
 
 
@@ -27,7 +27,7 @@ public class Castle extends Venue {
 
         return "\n"
                 + venueName
-                + " Castle\n\n"
+                + " Hall\n\n"
                 + description
                 + "\nLocated in " + location + "."
                 + "\nThe maximum capacity is " + capacity

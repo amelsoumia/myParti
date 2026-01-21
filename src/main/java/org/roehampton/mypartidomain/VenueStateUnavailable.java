@@ -1,4 +1,4 @@
-package org.roehampton.myPartiDomain;
+package org.roehampton.mypartidomain;
 
 
 public class VenueStateUnavailable implements VenueState {

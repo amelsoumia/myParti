@@ -1,4 +1,4 @@
-package org.roehampton.myPartiDomain;
+package org.roehampton.mypartidomain;
 
 
 public abstract class Facility implements Pricing {

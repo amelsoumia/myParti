@@ -1,6 +1,6 @@
-package org.roehampton.myPartiDomain;
+package org.roehampton.mypartidomain;
 
-import static org.roehampton.myPartiDomain.Booking.*;
+import static org.roehampton.mypartidomain.Booking.*;
 
 import java.util.List;
 

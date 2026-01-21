@@ -4,6 +4,6 @@ module com.example.mypartiapplication {
     requires java.sql;
     requires javafx.graphics;
 
-    opens com.example.myPartiApplication to javafx.fxml;
-    exports com.example.myPartiApplication;
+    opens com.example.mypartiapplication to javafx.fxml;
+    exports com.example.mypartiapplication;
 }
