@@ -13,7 +13,7 @@ public class Booking implements IdGenerator, OverallPricing {
     private Facility decor; // composition
 
     private String bookingID;
-    private static int guestCount, duration;
+    private static int guestCount, duration= 1;
 
 
     // Constructor
